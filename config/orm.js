@@ -2,7 +2,7 @@ const connection = require("./connection.js");
 
 const printQuestionMarks = (num) => {
     let arr = [];
-    for (let i = 0; i < num; i++){
+    for (let i = 0; i < num; i++) {
         arr.push("?");
     }
     return arr.toString();
@@ -10,9 +10,9 @@ const printQuestionMarks = (num) => {
 
 const objToSql = (ob) => {
     let arr = [];
-    for (let key in ob){
+    for (let key in ob) {
         let value = ob[key];
-        if (Object.hasOwnProperty.call(ob,key)){
+        if (Object.hasOwnProperty.call(ob, key)) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
@@ -23,13 +23,13 @@ const objToSql = (ob) => {
 }
 
 let orm = {
-    selectAll: (cb) => {
-        let query = "SELECT * FROM burgers";
-        connection.query(query, (err,res) => {
+    selectAll: (tableInput, cb) => {
+        let query = "SELECT * FROM " + tableInput + ";";
+        connection.query(query, (err, result) => {
             if (err) throw err;
-            cb(res);
+            cb(result);
         });
-        },
+    },
     insertOne: (cols, vals, cb) => {
         let query = "INSERT INTO burgers";
         query += " (";
@@ -41,9 +41,9 @@ let orm = {
 
         console.log(query);
 
-        connection.query(query, vals, (err,res) => {
+        connection.query(query, vals, (err, result) => {
             if (err) throw err;
-            cb(res);
+            cb(result);
         });
     },
     updateOne: (objColVals, condition, cb) => {
@@ -55,9 +55,9 @@ let orm = {
 
         console.log(query);
 
-        connection.query(query, (err,res) => {
+        connection.query(query, (err, result) => {
             if (err) throw err;
-            cb(results);
+            cb(result);
         });
     }
 }
