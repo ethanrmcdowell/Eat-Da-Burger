@@ -1,3 +1,59 @@
 body {
-    background: red;
+    background-color: #999b84 !important;
+}
+
+h2 {
+    font-family: 'Nerko One', cursive;
+}
+
+img {
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: 'Patrick Hand', cursive;
+    line-height: 1;
+}
+
+.btn {
+    font-size: 2.9rem;
+    font-family: 'Patrick Hand', cursive;
+    line-height: 1;
+}
+
+.col-6 {
+    background-color: #e6e6e6 !important;
+    margin-bottom: 200px;
+}
+
+.jumbotron {
+    background-color: #c5a880 !important;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.title-text {
+    position: absolute;
+    transform: rotate(-10deg);
+    top: 200px;
+    left: 240px;
+    font-family: 'Nerko One', cursive;
+    font-size: 8rem !important;
+    text-align: center;
+}
+
+#enter-burger {
+    display: block;
+    margin: auto;
+}
+
+#send-burger {
+    margin: 10px auto;
+    display: block;
 }
