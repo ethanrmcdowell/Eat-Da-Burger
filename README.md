@@ -1,4 +1,4 @@
-# EAT-DA-BURGER
+# EAT-DA-BURGER :hamburger: :hamburger:
 
 Since it's the year 2020 and food is one of the few things we can enjoy right now, I've created an application which will keep track of the types of burgers you'd like to try and allows you to mark off each one as you have the chance to eat them. This application utilizes a MySQL database to store the burger data that the user enters and uses Handlebars to template the burger database into the HTML to provide the user with the lists of burgers they have and haven't yet tried!
 
