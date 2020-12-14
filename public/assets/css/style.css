@@ -46,11 +46,18 @@ p {
     margin-bottom: 20px;
 }
 
-.title-text {
+.title-box {
     position: absolute;
-    transform: rotate(-10deg);
+    width: 100%;
     top: 200px;
-    left: 240px;
+}
+
+.title-text {
+    position: relative;
+    transform: rotate(-10deg);
+    top: 0;
+    margin-left: auto !important;
+    margin-right: auto !important;
     font-family: 'Nerko One', cursive;
     font-size: 8rem !important;
     text-align: center;
